@@ -15,8 +15,6 @@ const AddAccount = () => {
     } = useForm();
 
     const addAccount = (customerId, data) => {
-        console.log('custid', customerId);
-        console.log(data);
         dispatch(addAccountAsync({customerId, accountName: data.accountName}));
     };
     
