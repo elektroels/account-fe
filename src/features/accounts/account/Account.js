@@ -7,7 +7,7 @@ const Account = ({ account }) => {
     const toggle = () => { setShow(!show) };
 
     return (
-        <div className="account">
+        <div className="account box-shadow">
             <div
                 className="account__name"
                 onClick={() => toggle()}>
@@ -16,8 +16,15 @@ const Account = ({ account }) => {
 
             { show && 
                 <div className="account__details">
-                    <div>Balance: { account.balance }</div>
-                    <div>
+                    <div className="account__balance">
+                        <div>
+                            Balance:
+                        </div> 
+                        <div className={account.balance < 0 ? 'text-red' : ''}>
+                            { account.balance }
+                        </div> 
+                    </div>
+                    <div className="account__input">
                         <Link to={account.id+'/transactions'}>
                             <button className="element-bg">
                                 History

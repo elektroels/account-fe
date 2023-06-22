@@ -1,5 +1,6 @@
 .accounts {
     display: flex;
     flex-direction: column;
-    flex-flow: wrap;
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 20px;
 }

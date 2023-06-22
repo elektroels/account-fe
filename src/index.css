@@ -7,26 +7,39 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body * {
+  box-sizing: border-box;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
-button {
+button,
+input {
   appearance: none;
-  max-width: 360px;
-  min-width: 200px;
-  border-radius: 4px;
-  background: none;
-  font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
   padding: 15px;
-  text-align: center;
+  border-radius: 4px;
   outline: none;
-  border: 1px solid transparent;
   cursor: pointer;
+  width: 100%;
+  max-width: 400px;
+}
+
+input {
+  border: 1px solid lightgrey;
+}
+
+button,
+input[type=submit] {
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid transparent;
   color: white;
 }
+
 
 .element-bg {
   background: linear-gradient(
@@ -40,4 +53,12 @@ button:focus {
     to right,
     #447FA7,
     #77AFDA);
+}
+
+.text-red {
+  color: indianred;
+}
+
+.box-shadow {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
 }

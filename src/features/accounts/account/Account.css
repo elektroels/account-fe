@@ -4,7 +4,6 @@
     flex-direction: column;
     margin-right: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 0 11px rgba(33,33,33,.2);
     border-radius: 4px;
 }
 
@@ -20,12 +19,24 @@
         #447FA7);
 }
 
+.account__balance {
+    display: flex;
+    justify-content: space-between;
+}
+
+.account__input {
+    border-top: 1px solid lightgrey;
+    display: flex;
+    justify-content: flex-end;
+}
+
 .account__details {
     padding: 20px;
 }
 
 .account__details > div {
-    padding-bottom: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 .account__details > div:last-child {
