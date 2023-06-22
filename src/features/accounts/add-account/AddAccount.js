@@ -33,30 +33,10 @@ const AddAccount = () => {
                             <p className="text-red">Account name is required and must be more than 3 characters.</p>
                         }
                 </div>
-                <small>Initial amount</small>
-                <div>
-                    <input
-                        {...register('initialAmount', {
-                            required: true,
-                            valueAsNumber: true,
-                            validate: (value) => value >= 0
-                        })} />
-                    {errors.initialAmount &&
-                        <p className="text-red">Please set initial amount to 0 or more.</p>
-                    }
-                </div>
                 <input type="submit" className="element-bg" />
             </form>
         </div>
     );
 }
-
-            // <div>
-            //     <button 
-            //         className="element-bg"
-            //         onClick={() => addAccount(customerId, accountName)}>
-            //             Add account
-            //         </button>
-            //     </div>
 
 export default AddAccount; 
