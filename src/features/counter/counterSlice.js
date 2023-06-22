@@ -4,6 +4,7 @@ import { fetchCount } from './counterAPI';
 const initialState = {
   value: 0,
   status: 'idle',
+  customerId: 1
 };
 
 // The function below is called a thunk and allows us to perform async logic. It
@@ -60,6 +61,7 @@ export const { increment, decrement, incrementByAmount } = counterSlice.actions;
 // the state. Selectors can also be defined inline where they're used instead of
 // in the slice file. For example: `useSelector((state: RootState) => state.counter.value)`
 export const selectCount = (state) => state.counter.value;
+export const selectCustomerId = (state) => state.counter.customerId;
 
 // We can also write thunks by hand, which may contain both sync and async logic.
 // Here's an example of conditionally dispatching actions based on current state.

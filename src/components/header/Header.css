@@ -1,0 +1,36 @@
+.header {
+    min-height: 80px; 
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+    background: linear-gradient(
+        to right,
+        #003F63,
+        #225F85);
+}
+
+.header .header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .header__logo {
+    cursor: pointer;
+    display: inline; 
+}
+
+.header .header__nav a {
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .header .header__nav {
+        display: flex;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .header__logo__img {
+        width: 120px;
+    }
+}
