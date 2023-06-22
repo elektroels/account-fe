@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-export function fetchAccounts() {
-    return axios.get('http://localhost:8080/accounts');
+export function fetchAccounts(customerId) {
+    return axios.get (`http://localhost:8080/${customerId}/accounts`);
 }
 
 export function postAccount(account) {

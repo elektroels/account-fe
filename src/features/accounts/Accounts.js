@@ -8,10 +8,10 @@ import { selectCustomerId } from './../counter/counterSlice';
 
 const Accounts = () => {
     const dispatch = useDispatch()
-    useEffect(() => { dispatch(getAccountsAsync()) }, [dispatch]);
     const accounts = useSelector(selectAccounts);
     const customerId = useSelector(selectCustomerId);
     const accountsUI = accounts?.map( account => <Account account={ account } key={account.id}></Account>);
+    useEffect(() => { dispatch(getAccountsAsync(customerId)) }, [dispatch, customerId]);
 
     const accountName = "testName";
 
@@ -25,7 +25,13 @@ const Accounts = () => {
             <div className="accounts">
                 { accountsUI }
             </div>
-            <div><button onClick={() => addAccount(customerId, accountName)}>Add account</button></div>
+            <div>
+                <button 
+                    className="element-bg"
+                    onClick={() => addAccount(customerId, accountName)}>
+                        Add account
+                    </button>
+                </div>
         </>
     )
 }

@@ -6,9 +6,8 @@ import { getTransactionsAsync, selectTransactions } from './transactionSlice';
 const Transactions = () => {
     const { id } = useParams();
     const dispatch = useDispatch()
-    useEffect(() => { dispatch(getTransactionsAsync(id)) }, [dispatch]);
+    useEffect(() => { dispatch(getTransactionsAsync(id)) }, [dispatch, id]);
     const transactions = useSelector(selectTransactions);
-    console.log(transactions);
     const transactionsUI = transactions?.map( transaction => <p key={transaction.id}>{transaction.amount}</p>);
 
     return (

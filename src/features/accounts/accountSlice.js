@@ -7,8 +7,8 @@ const initialState = {
 
 export const getAccountsAsync = createAsyncThunk(
   'account/fetchAccounts',
-  async () => {
-    const response = await fetchAccounts();
+  async (customerId) => {
+    const response = await fetchAccounts(customerId);
     return response.data;;
   }
 );
@@ -16,7 +16,6 @@ export const getAccountsAsync = createAsyncThunk(
 export const addAccountAsync = createAsyncThunk(
   'account/addAccount',
   async (newAccount) => {
-    console.log(newAccount)
     const response = await postAccount(newAccount);
     return response.data;;
   }

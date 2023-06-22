@@ -11,3 +11,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+button {
+  appearance: none;
+  max-width: 360px;
+  min-width: 200px;
+  border-radius: 4px;
+  background: none;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 15px;
+  text-align: center;
+  outline: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  color: white;
+}
+
+.element-bg {
+  background: linear-gradient(
+    to right,
+    #225F85,
+    #447FA7);
+}
+
+button:focus {
+  background: linear-gradient(
+    to right,
+    #447FA7,
+    #77AFDA);
+}
